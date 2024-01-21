@@ -2,7 +2,7 @@ const toggle = document.querySelector("#toggle")
 let toggleLabel = document.querySelector(".toggle--dark")
 let pattern = document.querySelector(".bg-pattern")
 let body = document.querySelector(".body__dark")
-let heading5 = document.querySelector("h5")
+let h5 = document.querySelector("h5")
 let mainFollowersCard = document.querySelectorAll(".main__followers--media") 
 let mainLikesCard = document.querySelectorAll(".main__likes--card")
 let cardText = document.querySelectorAll(".card__text") 
@@ -15,17 +15,17 @@ let youtubeAccount = document.querySelector(".youtube--account")
 toggle.addEventListener("click", function(e){
     pattern.classList.toggle("bg-pattern-L")
     body.classList.toggle("body__light")
-    heading5.classList.toggle("light-theme")
+    
     //cardText.classList.toggle("card__text-L")
     toggleLabel.classList.toggle("toggle--light")
+    h5.classList.toggle("light-theme")
 
     facebookAccount.classList.toggle("facebook--account-L")
     twitterAccount.classList.toggle("twitter--account-L")
     instagramAccount.classList.toggle("instagram--account-L")
     youtubeAccount.classList.toggle("youtube--account-L")
-    darkThemeText.classList.toggle("light-theme")
 
-     //change color in light mode for all divs with class "main__followers--media"
+    //change color in light mode for all divs with class "main__followers--media"
     for (let i = 0; i < mainFollowersCard.length; i++) {
           mainFollowersCard[i].classList.toggle("main__followers--media-L")
         }
@@ -40,7 +40,5 @@ toggle.addEventListener("click", function(e){
         cardText[i].classList.toggle("card__text-L")
         }
 
-
-console.log(darkThemeText)
    
 })
